@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Vue Js - HelloWorld App</title>
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="flex-col max-w-4xl mx-auto p-8 space-y-2 relative">
+      <h1 class="text-4xl font-semibold bg-gray-300 p-4">Gallery </h1>
+      <h3 class="text-xl font-light bg-gray-100">Liked : {{countLike}}</h3>
+      <photo-search :searchTab="searchTab" @search-word="searchWord" @toggel-show-search-tab="toggelShowSearchTab" @cancle-Search="cancleSearch"></photo-search>
+      <photo-list :tasks="searchPic" @toggle-like="toggleLike" @zoom-in-image="zoomInImage"></photo-list>
+      <photo-view :isZoom="zoom" :current="currentImg" @zoom-out-images="zoomOutImage"></photo-view>
+    </div>
+  </div>
+
+
+  <!-- my main.js -->
+  <script src="./main.js"></script>
+  <script src="./components/PhotoSearch.js"></script>
+  <script src="./components/PhotoView.js"></script>
+  <script src="./components/PhotoList.js"></script>
+
+  <script>
+    const moutedApp = app.mount('#app')
+  </script>
+</body>
+
+</html>
