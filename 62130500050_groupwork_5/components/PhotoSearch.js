@@ -3,6 +3,10 @@ app.component('photo-search', {
         searchtab: {
             type: Boolean,
             require: true
+        },
+        result:{
+            type:Number,
+            require:true
         }
     },
     template:
@@ -21,6 +25,7 @@ app.component('photo-search', {
     <button class="bg-red-500 w-2/12 text-md text-white" v-show="searchtab"
         v-on:click="cancleSearch">Cancel!</button>
 </div>
+<h2 class="text-3xl font-semibold" v-if="result==0">No Found!</h2>
 `,
     data() {
         return {
