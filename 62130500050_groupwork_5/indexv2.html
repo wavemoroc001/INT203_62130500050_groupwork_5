@@ -25,7 +25,7 @@
       <h3 class="text-xl font-light bg-gray-100">Liked : {{countLike}}</h3>
       <photo-search :searchTab="searchTab" :result="searchPic.length" @search-word="searchWord" @toggel-show-search-tab="toggelShowSearchTab" @cancle-Search="cancleSearch"></photo-search>
       <photo-list :tasks="searchPic" @toggle-like="toggleLike" @zoom-in-image="zoomInImage"></photo-list>
-      <photo-view :isZoom="zoom" :current="currentImg" @zoom-out-images="zoomOutImage"></photo-view>
+      <photo-view :iszoom="zoom" :current_img="currentImg" @zoom-out-images="zoomOutImage"></photo-view>
     </div>
   </div>
 
