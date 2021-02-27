@@ -9,6 +9,8 @@ app.component('photo-view', {
             require: true
         }
     },
+    emits:["zoom-out-images"]
+    ,
     template:
         /*html*/
         `

@@ -9,6 +9,8 @@ app.component('photo-search', {
             require:true
         }
     },
+    emits:["toggel-show-search-tab","cancle-Search"]
+    ,
     template:
         /*html*/
         `            
@@ -42,7 +44,7 @@ app.component('photo-search', {
     },
     watch: {
         searchword (){
-            console.log(`word has changed! : ${this.searchword}`)
+            //sconsole.log(`word has changed! : ${this.searchword}`)
             this.$root.searchWord = this.searchword
         }
 

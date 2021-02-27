@@ -5,6 +5,8 @@ app.component('photo-list', {
             require: true
         }
     },
+    emits:["toggle-like","zoom-in-image"]
+    ,
     template:
         /*html*/
         `<div v-for="(task,index) in tasks ">
